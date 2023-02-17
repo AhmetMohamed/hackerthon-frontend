@@ -1,11 +1,25 @@
-import React from 'react';
-import Chart from '../Assets/Chart.png';
-import Logout from '../Assets/logOutIcon.svg';
-import Option from '../Assets/optionIcon.svg';
-import Info from '../Assets/infoIcon.svg';
-import MapImage from '../Assets/Map.png';
+import React, { useState } from "react";
+import Chart from "../Assets/Chart.png";
+import Logout from "../Assets/logOutIcon.svg";
+import Option from "../Assets/optionIcon.svg";
+import Info from "../Assets/infoIcon.svg";
+import MapImage from "../Assets/Map.png";
 
 const SideBar = () => {
+  const [magaalo, setMagaalo] = useState("");
+  const [geed, setGeed] = useState("");
+  const [number, setNumber] = useState("");
+  const [donate, setDonate] = useState({});
+  const plant = () => {
+    if (
+      window.confirm("mahubtaa inaad intaa uun aad beeraysid?") == true &&
+      magaalo != "" &&
+      geed != "" &&
+      number != ""
+    ) {
+      setDonate({ magaalo, geed, number });
+    }
+  };
   return (
     <div className="">
       <div>
@@ -14,25 +28,34 @@ const SideBar = () => {
             <select
               name=""
               id=""
-              placeholder="Location Lock"
               className="w-full px-3 py-3 text-white  bg-[#BBD6A7]/30 rounded-lg text-sm font-medium"
+              value={magaalo}
+              onChange={(e) => {
+                setMagaalo(e.target.value);
+              }}
             >
               <option
-                value="Orange"
+                value=""
+                className="bg-[#669542] font-medium text-sm py-2"
+              >
+                Magaalada
+              </option>
+              <option
+                value="Hargeisa"
                 className="bg-[#669542] font-medium text-sm py-2"
               >
                 Hargeisa
               </option>
 
               <option
-                value="apple"
+                value="Burao"
                 className="bg-[#669542] font-medium text-sm py-2"
               >
                 Buroa
               </option>
 
               <option
-                value="mango"
+                value="Erigavo"
                 className="bg-[#669542] font-medium text-sm py-2"
               >
                 Erigavo
@@ -44,7 +67,17 @@ const SideBar = () => {
               id=""
               placeholder="Select Tree"
               className="w-full px-3 py-3 text-white  bg-[#BBD6A7]/30 rounded-lg text-sm font-medium"
+              value={geed}
+              onChange={(e) => {
+                setGeed(e.target.value);
+              }}
             >
+              <option
+                value=""
+                className="bg-[#669542] font-medium text-sm py-2"
+              >
+                Geedka
+              </option>
               <option
                 value="Orange"
                 className="bg-[#669542] font-medium text-sm py-2"
@@ -69,11 +102,18 @@ const SideBar = () => {
 
             <input
               type="text"
-              placeholder="# Number"
+              placeholder="Tirada"
               className="w-full px-3 text-white py-3 bg-[#BBD6A7]/30 rounded-lg text-sm font-medium"
+              value={number}
+              onChange={(e) => {
+                setNumber(e.target.value);
+              }}
             />
 
-            <button className="bg-[#669542] py-3 rounded-lg font-semibold text-sm mt-4">
+            <button
+              className="bg-[#669542] py-3 rounded-lg font-semibold text-sm mt-4"
+              onClick={plant}
+            >
               Confirm
             </button>
           </div>

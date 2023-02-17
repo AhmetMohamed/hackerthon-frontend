@@ -4,8 +4,8 @@ import recycle from "../Assets/recycleIcon.svg";
 
 const Services = () => {
   return (
-    <div className="">
-      <h1 className="font-extrabold text-7xl text-white text-center my-32">
+    <div className="" id="service">
+      <h1 className="font-extrabold text-5xl md:text-7xl text-white text-center my-32">
         Our Services
       </h1>
       <div className="md:flex items-center justify-center md:gap-32 md:mx-32 mx-10">

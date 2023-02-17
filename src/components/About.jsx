@@ -1,18 +1,19 @@
-import React from 'react';
-import aboutimg from '../Assets/aboutImage.png';
-// import about from "../Assets/About.png";
-import eye from '../Assets/eye.svg';
-import charity from '../Assets/charity.svg';
+import React from "react";
+import aboutimg from "../Assets/aboutImage.png";
+import eye from "../Assets/eye.svg";
+import charity from "../Assets/charity.svg";
 
 const About = () => {
   return (
-    <div className="">
+    <div className="" id="about">
       <div className="md:flex md:items-center md:justify-center md:gap-32 mt-36 space-y-10 p-10">
-        <div className="w-96">
+        <div className="md:w-96">
           <img src={aboutimg} alt="" srcset="" />
         </div>
         <div>
-          <h1 className="font-extrabold text-7xl text-white">About Us</h1>
+          <h1 className="font-extrabold md:text-7xl text-5xl md:text-left text-center text-white">
+            About Us
+          </h1>
           <p className="text-gray-400 my-5">
             There are many variations of passages of Lorem Ipsum
             <br />

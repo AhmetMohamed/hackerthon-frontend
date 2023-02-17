@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -33,14 +34,14 @@ const Login = () => {
 
           <p className="text-center text-gray-300 text-xs font-medium">
             If you have not an account please create an <br />
-            account click{' '}
-            <a href="#" className="text-[#669542] font-semibold">
-              Signup{' '}
-            </a>
-            or go back{' '}
-            <a href="#" className="text-[#669542] font-semibold">
+            account click{" "}
+            <Link to={"/signup"} className="text-[#669542] font-semibold">
+              Signup{" "}
+            </Link>
+            or go back{" "}
+            <Link to={"/"} className="text-[#669542] font-semibold">
               Home
-            </a>
+            </Link>
           </p>
         </div>
       </div>
