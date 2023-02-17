@@ -1,11 +1,12 @@
-import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home";
-import SignUp from "./Pages/SignUp";
-import Login from "./Pages/Login";
-import Geed from "./Pages/Geed";
-import Selector from "./Pages/Selector";
-import Recycling from "./Pages/Recycling";
+import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Pages/Home';
+import SignUp from './Pages/SignUp';
+import Login from './Pages/Login';
+import Geed from './Pages/Geed';
+import Selector from './Pages/Selector';
+import Recycling from './Pages/Recycling';
+import Admin from './Pages/Admin';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/selector" element={<Selector />} />
         <Route path="/recycling" element={<Recycling />} />
         <Route path="/geed" element={<Geed />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );
